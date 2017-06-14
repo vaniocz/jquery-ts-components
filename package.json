@@ -1,0 +1,19 @@
+{
+    "name": "jquery-ts-components",
+    "version": "0.1.0",
+    "description": "Simple jQuery TypeScript component system",
+    "engines": {
+        "node": ">=6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/vaniocz/jquery-ts-components.git"
+    },
+    "keywords": [
+        "jQuery",
+        "TypeScript",
+        "components"
+    ],
+    "author": "Marek Štípek <mario.dweller@seznam.cz>",
+    "license": "MIT"
+}
