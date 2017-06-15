@@ -43,6 +43,7 @@ export default class Hello
 ```ts
 // index.ts
 import {register} from 'jquery-ts-components';
+import 'Hello';
 
 register(document.body);
 ```
