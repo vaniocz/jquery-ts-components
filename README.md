@@ -6,7 +6,7 @@ Simple jQuery TypeScript component system.
 
 ```ts
 // Hello.ts
-import component from 'jquery-ts-components';
+import {component} from 'jquery-ts-components';
 
 interface HelloOptions
 {
@@ -42,7 +42,7 @@ export default class Hello
 
 ```ts
 // index.ts
-import register from 'jquery-ts-components/register';
+import {register} from 'jquery-ts-components';
 
 register(document.body);
 ```
