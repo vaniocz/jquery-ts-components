@@ -35,7 +35,7 @@ export default class Hello
 <body>
     <p data-component-hello-component='{"text": "Hello world!"}'></p>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="index.js">
+    <script src="index.js"></script>
 </body>
 </html>
 ```
@@ -43,6 +43,7 @@ export default class Hello
 ```ts
 // index.ts
 import {register} from 'jquery-ts-components';
+import 'Hello';
 
 register(document.body);
 ```
