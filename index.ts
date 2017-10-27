@@ -37,7 +37,7 @@ export function component(name: string)
 
 export function register(root: JQuery | HTMLElement | string): void
 {
-    $(root).find('*').each((i, element) => {
+    $(root).find('*').add(root).each((i, element) => {
         $.each(element.attributes, (j, attribute: Attr) => {
             if (attribute.name.indexOf('data-component-') !== 0) {
                 return;
