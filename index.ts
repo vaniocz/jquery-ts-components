@@ -37,7 +37,12 @@ export function component(name: string)
 
 export function register(root: JQuery | HTMLElement | string): void
 {
-    $(root).find('*').add(root).each((i, element) => {
+    root = $(root)[0];
+    const elements = root.getElementsByTagName('*');
+
+    for (let i = -1; i < elements.length; i++) {
+        const element = i === -1 ? root : elements[i];
+
         $.each(element.attributes, (j, attribute: Attr) => {
             if (attribute.name.indexOf('data-component-') !== 0) {
                 return;
@@ -52,5 +57,5 @@ export function register(root: JQuery | HTMLElement | string): void
             let $element = $(element);
             registerComponent($element, name, $element.data(attribute.name.substr(5)));
         });
-    });
+    }
 }
