@@ -8,7 +8,7 @@ declare global
 
 interface JQueryComponentConstructor
 {
-    new (element: JQuery | HTMLElement | string, options: any): any;
+    new (element: JQuery|HTMLElement|string|any, options: any): any;
 }
 
 function convertToCamelCase(text: string): string
@@ -35,9 +35,9 @@ export function component(name: string)
     }
 }
 
-export function register(root: JQuery | HTMLElement | string): void
+export function register(root: JQuery|HTMLElement|string): void
 {
-    root = $(root)[0];
+    root = $(root)[0] as HTMLElement;
     const elements = root.getElementsByTagName('*');
 
     for (let i = -1; i < elements.length; i++) {
