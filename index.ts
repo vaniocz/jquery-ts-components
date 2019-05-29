@@ -20,6 +20,11 @@ function registerComponent($element: JQuery, name: string, options: any): void
 {
     let Component = $.components[name];
     let components = $element.data('components') || {};
+
+    if (components[name]) {
+        return;
+    }
+
     components[name] = new Component($element, options);
     $element.data('components', components);
 }
