@@ -4,13 +4,13 @@
 
 interface JQueryStatic {
     <TDeclared = JQuery._Unknown,
-        T extends string|Element[]|JQuery<any>|Element|JQuery.PlainObject =
-                string|Element[]|JQuery<any>|Element|JQuery.PlainObject,
+        T extends string | Element[] | JQuery<any> | Element | JQuery.PlainObject =
+                string | Element[] | JQuery<any> | Element | JQuery.PlainObject,
         TReturn =
             TDeclared extends JQuery._Unknown ?
                 T extends string ? HTMLElement :
-                    T extends Element[]|JQuery<any> ? T[number] :
-                        T extends Element|JQuery.PlainObject ? T :
+                    T extends Element[] | JQuery<any> ? T[number] :
+                        T extends Element | JQuery.PlainObject ? T :
                             never :
                 TDeclared>(html_selector_element_elementArray_object_selection: T): JQuery<TReturn>;
 }

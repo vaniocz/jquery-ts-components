@@ -18,8 +18,7 @@ export default class Hello
 {
     private $element: JQuery;
 
-    public constructor(element: JQuery|JQuery.Selector|HTMLElement, options: HelloOptions = {})
-    {
+    public constructor(element: JQuery | JQuery.Selector | HTMLElement, options: HelloOptions = {})    {
         this.$element = $(element);
         this.$element.text(options.text || 'Hello');
     }
