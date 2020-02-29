@@ -1,19 +1,51 @@
 {
+  "_from": "jquery-ts-components@^0.1.8",
+  "_id": "jquery-ts-components@0.1.8",
+  "_inBundle": false,
+  "_integrity": "sha512-SYztm+5zWz9WmZIGxqktpZo1u+IuBor61cOaBPELF5bgcbdbHPsMeFBhwRDlwaiEq/r6Gr6brPgCbRWRhxISXg==",
+  "_location": "/jquery-ts-components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "jquery-ts-components@^0.1.8",
     "name": "jquery-ts-components",
-    "version": "0.1.8",
-    "description": "Simple jQuery TypeScript component system",
-    "engines": {
-        "node": ">=6"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/vaniocz/jquery-ts-components.git"
-    },
-    "keywords": [
-        "jQuery",
-        "TypeScript",
-        "components"
-    ],
-    "author": "Marek Štípek <mario.dweller@seznam.cz>",
-    "license": "MIT"
+    "escapedName": "jquery-ts-components",
+    "rawSpec": "^0.1.8",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.8"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-ts-components/-/jquery-ts-components-0.1.8.tgz",
+  "_shasum": "2bd1109410a31a6a323c5a14fa2e96adcc51ed3b",
+  "_spec": "jquery-ts-components@^0.1.8",
+  "_where": "D:\\www\\shopas-theme2",
+  "author": {
+    "name": "Marek Štípek",
+    "email": "mario.dweller@seznam.cz"
+  },
+  "bugs": {
+    "url": "https://github.com/vaniocz/jquery-ts-components/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Simple jQuery TypeScript component system",
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://github.com/vaniocz/jquery-ts-components#readme",
+  "keywords": [
+    "jQuery",
+    "TypeScript",
+    "components"
+  ],
+  "license": "MIT",
+  "name": "jquery-ts-components",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vaniocz/jquery-ts-components.git"
+  },
+  "version": "0.1.8"
 }

@@ -18,7 +18,7 @@ export default class Hello
 {
     private $element: JQuery;
 
-    public constructor(element: JQuery | HTMLElement | string, options: HelloOptions = {})
+    public constructor(element: JQuery|JQuery.Selector|HTMLElement, options: HelloOptions = {})
     {
         this.$element = $(element);
         this.$element.text(options.text || 'Hello');
@@ -34,7 +34,7 @@ export default class Hello
 </head>
 <body>
     <p data-component-hello-component='{"text": "Hello world!"}'></p>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
