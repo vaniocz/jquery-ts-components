@@ -41,27 +41,29 @@ export function component(name: string)
     }
 }
 
-export function register(root: JQuery | HTMLElement | JQuery.Selector): void
+export function register(root: JQuery | HTMLElement | string): void
 {
     root = $(root)[0] as HTMLElement;
-    const elements = root.getElementsByTagName('*') as HTMLCollectionOf<HTMLElement>;
+    const elements = root.getElementsByTagName('*');
 
     for (let i = -1; i < elements.length; i++) {
         const element = i === -1 ? root : elements[i];
 
-        $.each(element.attributes, (j, attribute: Attr) => {
-            if (attribute.name.indexOf('data-component-') !== 0) {
-                return;
+        for (let j = 0; j < element.attributes.length; j++) {
+            const attribute = element.attributes[j];
+
+            if (!attribute.specified || attribute.name.indexOf('data-component-') !== 0) {
+                continue;
             }
 
             const name = convertToCamelCase(attribute.name.substr(14));
 
             if (!$.components || !$.components[name]) {
-                return;
+                continue;
             }
 
             let $element = $(element);
             registerComponent($element, name, $element.data(attribute.name.substr(5)));
-        });
+        }
     }
 }
