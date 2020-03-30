@@ -41,10 +41,10 @@ export function component(name: string)
     }
 }
 
-export function register(root: JQuery | HTMLElement | string): void
+export function register(root: JQuery | HTMLElement | JQuery.Selector): void
 {
     root = $(root)[0] as HTMLElement;
-    const elements = root.getElementsByTagName('*');
+    const elements = root.getElementsByTagName('*') as HTMLCollectionOf<HTMLElement>;
 
     for (let i = -1; i < elements.length; i++) {
         const element = i === -1 ? root : elements[i];
