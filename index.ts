@@ -1,5 +1,3 @@
-/// <reference path="jquery.d.ts"/>
-
 declare global
 {
     interface JQueryStatic {
